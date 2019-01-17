@@ -1,0 +1,25 @@
+--cpu Cortex-M7.fp.sp
+"studio_check\startup_stm32f746xx.o"
+"studio_check\main.o"
+"studio_check\stm32f7xx_it.o"
+"studio_check\stm32f7xx_hal_msp.o"
+"studio_check\stm32f7xx_hal_cortex.o"
+"studio_check\stm32f7xx_hal_tim.o"
+"studio_check\stm32f7xx_hal_tim_ex.o"
+"studio_check\stm32f7xx_hal_rcc.o"
+"studio_check\stm32f7xx_hal_rcc_ex.o"
+"studio_check\stm32f7xx_hal_flash.o"
+"studio_check\stm32f7xx_hal_flash_ex.o"
+"studio_check\stm32f7xx_hal_gpio.o"
+"studio_check\stm32f7xx_hal_dma.o"
+"studio_check\stm32f7xx_hal_dma_ex.o"
+"studio_check\stm32f7xx_hal_pwr.o"
+"studio_check\stm32f7xx_hal_pwr_ex.o"
+"studio_check\stm32f7xx_hal.o"
+"studio_check\stm32f7xx_hal_i2c.o"
+"studio_check\stm32f7xx_hal_i2c_ex.o"
+"studio_check\system_stm32f7xx.o"
+--library_type=microlib --strict --scatter "Studio_Check\Studio_Check.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Studio_Check.map" -o Studio_Check\Studio_Check.axf
