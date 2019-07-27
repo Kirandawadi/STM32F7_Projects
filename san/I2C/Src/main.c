@@ -361,7 +361,6 @@ void MPU_GET_VALUE(uint16_t slave_address)
 	gyro_x = ~((((int)data[8]<<8|((int)data[9])))-1);
 	gyro_y = ~((((int)data[10]<<8|((int)data[11])))-1);
 	gyro_z = ~((((int)data[12]<<8|((int)data[13])))-1);
-		
 
 }
 
@@ -376,23 +375,22 @@ void MPU_SHOWDATA(void)
      Yg = gyro_y/131;
      Zg = gyro_z/131;
      
-     
-     del_x = (double)(TIM1->CNT) / 65534 ;
-		count = del_x;
-		 TIM1->CNT =0;
-     angle_gyro += Yg*del_x;	
-     tot = sqrt(Xa*Xa+Ya*Ya+Za*Za);
-     angle1 = asin((float)Xa/tot)*57.29577;
-	
-     if(set_gyro_angle)
-     {
-	     angle_gyro = angle_gyro*0.96 +angle1*0.04;
-     }
-     else
-     {
-	     angle_gyro = angle1;
-	     set_gyro_angle =1;
-     }     
+//     del_x = (double)(TIM1->CNT) / 65534 ;
+//		count = del_x;
+//		 TIM1->CNT =0;
+//     angle_gyro += Yg*del_x;	
+//     tot = sqrt(Xa*Xa+Ya*Ya+Za*Za);
+//     angle1 = asin((float)Xa/tot)*57.29577;
+//	
+//     if(set_gyro_angle)
+//     {
+//	     angle_gyro = angle_gyro*0.96 +angle1*0.04;
+//     }
+//     else
+//     {
+//	     angle_gyro = angle1;
+//	     set_gyro_angle =1;
+//     }     
      
 		 
 
